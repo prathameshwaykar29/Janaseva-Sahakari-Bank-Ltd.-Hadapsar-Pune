@@ -98,11 +98,11 @@ export default function MainSaral() {
   ];
 
   const TAB_COMPONENTS = {
-    [tl.Overview]:     <Saralover />,
-    [tl.Features]:     <SaralBenefit />,
-    [tl.Eligibility]:  <SaralEiligibitly />,
-    [tl.Documents]:    <SaralDoc />,
-    [tl.FAQs]:         <Saralfaq />,
+    [tl.Overview]: <Saralover />,
+    [tl.Features]: <SaralBenefit />,
+    [tl.Eligibility]: <SaralEiligibitly />,
+    [tl.Documents]: <SaralDoc />,
+    [tl.FAQs]: <Saralfaq />,
   };
 
   const [tab, setTab] = useState(tl.Overview);
@@ -130,6 +130,7 @@ export default function MainSaral() {
         <div className="w-full lg:w-auto">
           <CalculatorSidebar
             title={tl.calcTitle}
+            loanName="Saral Karj Yojana"     // ← add this
             minAmount={10000}
             maxAmount={1000000}
             defaultAmount={50000}

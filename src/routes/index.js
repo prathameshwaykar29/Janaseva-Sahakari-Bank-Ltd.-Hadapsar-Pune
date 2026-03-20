@@ -14,7 +14,7 @@ import CreditAudit from '../components/Credit/CreditAudit/Main'
 import CreditRepair from '../components/Credit/CreditRepair/Main'
 import Careers from '../components/Careers/Main'
 import Faqs from '../components/Faqs/Main'
-import ApplyNow from '../components/ApplyNow/Main'
+
 import CompareEMI from '../components/Features/CompareEMI/Main'
 import HomeLoan from '../components/Features/HomeLoan/Main'
 import HomeLoanEligibility from '../components/Features/HomeLoanEligibility/Main'
@@ -83,6 +83,7 @@ import Sms from '../components/SMS-Banking/Sms'
 import DigiComplaint from '../components/lodge-a-complaint/SubLodgeComplaint/DigiComplaint'
 import Policy from '../components/Privacy-Policy/Policy'
 import BranchLocator from '../components/Branch-Locator/BranchLocator'
+import ApplyMain from '../components/Apply-Now/ApplyMain'
 
 
 
@@ -172,7 +173,6 @@ const Routing = () => {
         <Route path='/Cash-Credit-Secured-General' element={<CashCredit />} />
 
         <Route path='/3-wheeler-loan' element={<Threevehicleloan />} />
-        <Route path="/applynow" element={<ApplyNow />} />
         <Route path="/compareEMI" element={< CompareEMI />} />
         <Route path="/homeloan" element={< HomeLoan />} />
         <Route path="/homeloaneligibility" element={<HomeLoanEligibility />} />
@@ -188,6 +188,7 @@ const Routing = () => {
         <Route path="/Mobile-Banking" element={<Mobile />} />
         <Route path="/Internet-banking" element={<Internet />} />
         <Route path="/IMPS-NEFT-RTGS" element={<IMPS />} />
+        <Route path="/Apply-Now" element={<ApplyMain />} />
 
       </Routes>
       <Footer />

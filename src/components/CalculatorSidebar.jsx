@@ -212,9 +212,9 @@
 // }
 
 
-
 import { useState } from "react";
 import { MdCalculate } from "react-icons/md";
+import { Link } from "react-router-dom";        // ← add this
 import { useLang } from "./ImpFolder/LangContext";
 
 const fmt = (n) => "₹" + Math.round(n).toLocaleString("en-IN");
@@ -238,7 +238,7 @@ const translations = {
     interest: "व्याज",
     total: "एकूण",
     applyNow: "अर्ज करा →",
-    months: "m",
+    months: "म",
   },
 };
 
@@ -249,6 +249,7 @@ export default function CalculatorSidebar({
   tenures = [12, 24, 36, 48],
   rate = 7.25,
   title = "Loan Calculator",
+  loanName = "General Loan",       // ← add this prop
 }) {
   const [amount, setAmount] = useState(defaultAmount);
   const [tenure, setTenure] = useState(tenures[0]);
@@ -332,9 +333,14 @@ export default function CalculatorSidebar({
             ))}
           </div>
 
-          <button className="w-full py-2.5 bg-blue-50 text-black rounded text-sm font-semibold">
+          {/* Apply Now → navigates to apply page with loan name */}
+          <Link
+            to="/Apply-Now"
+            state={{ loanName }}                              // ← passes loan name
+            className="block w-full py-2.5 bg-[#1e3163] text-white text-center rounded text-sm font-semibold hover:bg-[#f47012] transition-colors duration-200"
+          >
             {t.applyNow}
-          </button>
+          </Link>
 
         </div>
       </div>

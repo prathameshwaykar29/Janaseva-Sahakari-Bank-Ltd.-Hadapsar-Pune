@@ -1,8 +1,31 @@
-
 import React from "react";
+import { Link } from "react-router-dom";
+import { useLang } from "../../ImpFolder/LangContext";
 import bikeImg from "../../../assets/images/Loan/new-vehicle.png";
 
+const translations = {
+  en: {
+    title: "Finance Your Vehicle with",
+    subtitle: "New Commercial Vehicle Loan",
+    desc: "Quick financing for your new commercial vehicle with low interest and flexible repayment.",
+    applyBtn: "Apply Now",
+    calcBtn: "Calculate EMI",
+    loanName: "New Commercial Vehicle Loan",
+  },
+  mr: {
+    title: "आपल्या वाहनासाठी वित्तपुरवठा",
+    subtitle: "नवीन व्यावसायिक वाहन कर्ज",
+    desc: "नवीन व्यावसायिक वाहनासाठी कमी व्याजदरात आणि लवचिक परतफेडीसह जलद कर्ज सुविधा.",
+    applyBtn: "अर्ज करा",
+    calcBtn: "ईएमआय मोजा",
+    loanName: "New Commercial Vehicle Loan",
+  },
+};
+
 const MainNewBredcom = () => {
+  const { lang } = useLang();
+  const t = translations[lang] || translations.en;
+  const loanName = t.loanName;
 
   const scrollToCalculator = () => {
     const section = document.getElementById("calculator");
@@ -19,40 +42,32 @@ const MainNewBredcom = () => {
 
           {/* LEFT SIDE */}
           <div>
-            <h1 className="text-3xl lg:text-6xl font-bold text-[#1e3163] leading-tight mb-4">
-  Finance Your Vehicle with
-  <span className="block text-[#c9a84c] text-5xl">
-    New Commercial Vehicle Loan
-  </span>
-</h1>
+            <h1 className="text-3xl lg:text-5xl font-bold text-[#1e3163] leading-tight mb-4">
+              {t.title}
+              <span className="block text-[#c9a84c] text-4xl mt-1">
+                {t.subtitle}
+              </span>
+            </h1>
 
-<p className="text-gray-600 text-lg leading-relaxed mb-4">
-  Quick financing for your new commercial vehicle with low interest and flexible repayment.
-</p>
-
-            {/* <div className="bg-white shadow-xl rounded-lg px-4 py-3 flex flex-col sm:flex-row items-center justify-between mb-6">
-              <div>
-                <p className="text-sm text-gray-500">Interest Rate</p>
-                <h3 className="text-3xl font-bold text-[#1e3163]">10% – 10.50%</h3>
-              </div>
-
-              <div className="text-right mt-2 sm:mt-0">
-                <p className="text-sm text-gray-500">Loan Tenure</p>
-                <h3 className="text-xl font-semibold text-[#1e3163]">Up to 48 Months</h3>
-              </div>
-            </div> */}
+            <p className="text-gray-600 text-lg leading-relaxed mb-4">
+              {t.desc}
+            </p>
 
             <div className="flex flex-wrap gap-4 mb-4">
 
-              <button className="bg-[#1e3163] text-white px-8 py-3 rounded-xl font-semibold shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300">
-                Apply Now
-              </button>
+              <Link
+                to="/Apply-Now"
+                state={{ loanName }}
+                className="bg-[#1e3163] text-white px-8 py-3 rounded-xl font-semibold shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300"
+              >
+                {t.applyBtn}
+              </Link>
 
               <button
                 onClick={scrollToCalculator}
                 className="border bg-white border-[#1e3163] text-[#1e3163] px-8 py-3 rounded-xl font-semibold hover:-translate-y-1 transition duration-300"
               >
-                Calculate EMI
+                {t.calcBtn}
               </button>
 
             </div>
@@ -62,7 +77,7 @@ const MainNewBredcom = () => {
           <div className="relative flex justify-center -mb-0 lg:-mb-5">
             <img
               src={bikeImg}
-              alt="3 Wheeler Loan"
+              alt="New Commercial Vehicle Loan"
               className="w-[280px] sm:w-[350px] lg:w-[450px] object-contain"
             />
           </div>

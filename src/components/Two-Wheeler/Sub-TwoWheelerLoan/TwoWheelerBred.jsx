@@ -1,8 +1,32 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
+import { useLang } from "../../ImpFolder/LangContext";
 import bikeImg from "../../../assets/images/Loan/white-cruiser.png";
 
+const translations = {
+  en: {
+    title: "Two-Wheeler Loan",
+    subtitle: "for Easy Bike Ownership",
+    desc: "Get quick and affordable finance to purchase your new or used two-wheeler with flexible repayment options.",
+    applyBtn: "Apply Now",
+    calcBtn: "Calculate EMI",
+    loanName: "Two-Wheeler Loan",
+  },
+  mr: {
+    title: "दोन चाकी कर्ज",
+    subtitle: "सुलभ बाईक मालकीसाठी",
+    desc: "आपल्या नवीन किंवा वापरलेल्या दोन चाकी वाहनासाठी त्वरित आणि परवडणारी आर्थिक मदत मिळवा.",
+    applyBtn: "अर्ज करा",
+    calcBtn: "ईएमआय मोजा",
+    loanName: "दोन चाकी कर्ज योजना",
+  },
+};
+
 const TwoWheelerBred = () => {
+  const { lang } = useLang();
+  const t = translations[lang] || translations.en;
+  const loanName = t.loanName;
 
     const scrollToCalculator = () => {
         const section = document.getElementById("calculator");
@@ -20,15 +44,14 @@ const TwoWheelerBred = () => {
                     {/* LEFT SIDE */}
                     <div>
                        <h1 className="text-3xl lg:text-6xl font-bold text-[#1e3163] leading-tight mb-4">
-    Two-Wheeler Loan
+    {t.title}
     <span className="block text-[#c9a84c] text-5xl">
-        for Easy Bike Ownership
+        {t.subtitle}
     </span>
 </h1>
 
 <p className="text-gray-600 text-lg leading-relaxed mb-4">
-    Get quick and affordable finance to purchase your new or used two-wheeler with flexible repayment options.
-</p>
+{t.desc}</p>
                         {/* <div className="bg-white shadow-xl rounded-lg px-4 py-3 flex flex-col sm:flex-row items-center justify-between mb-6">
               <div>
                 <p className="text-sm text-gray-500">Interest Rate</p>
@@ -43,15 +66,19 @@ const TwoWheelerBred = () => {
 
                         <div className="flex flex-wrap gap-4 mb-4">
 
-                            <button className="bg-[#1e3163] text-white px-8 py-3 rounded-xl font-semibold shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300">
-                                Apply Now
-                            </button>
+                            <Link
+                                to="/Apply-Now"
+                                state={{ loanName }}
+                                className="bg-[#1e3163] text-white px-8 py-3 rounded-xl font-semibold shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300"
+                            >
+                                {t.applyBtn}
+                            </Link>
 
                             <button
                                 onClick={scrollToCalculator}
                                 className="border bg-white border-[#1e3163] text-[#1e3163] px-8 py-3 rounded-xl font-semibold hover:-translate-y-1 transition duration-300"
                             >
-                                Calculate EMI
+                                {t.calcBtn}
                             </button>
 
                         </div>
