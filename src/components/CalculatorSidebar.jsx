@@ -238,7 +238,7 @@ const translations = {
     interest: "व्याज",
     total: "एकूण",
     applyNow: "अर्ज करा →",
-    months: "म",
+    months: "m",
   },
 };
 

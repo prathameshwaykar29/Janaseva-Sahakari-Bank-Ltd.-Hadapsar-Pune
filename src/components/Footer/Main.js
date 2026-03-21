@@ -127,7 +127,8 @@ const Footer = () => {
                                     <li><Link to="/#">Board Of Management</Link></li>
                                     <li><Link to="/#">Events</Link></li>
                                     <li><Link to="/#">Blogs</Link></li>
-                                    <li><Link to="/#">Career</Link></li>
+                                    <li><Link to="/#">Career</Link></li> 
+                                    <li><Link to="/Loan-Interest-Rate">Loan Interest Rate</Link></li>
 
                                 </ul>
 
@@ -145,7 +146,7 @@ const Footer = () => {
                                 <ul className="list-unstyled footer-widget__menu">
                                     <li><Link to="/#">About</Link></li>
                                     <li><Link to="/#">Our Services</Link></li>
-                                    <li><Link to="/#">Holidays</Link></li>
+                                    <li><Link to="/bank-holiday">Holidays</Link></li>
                                     <li><Link to="/#">Annual Reports</Link></li>
                                     <li><Link to="/#">Contact</Link></li>
                                     <li><Link to="/Downloads">DownLoads</Link></li>

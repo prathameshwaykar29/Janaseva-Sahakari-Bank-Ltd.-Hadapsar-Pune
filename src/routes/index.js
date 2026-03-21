@@ -84,6 +84,8 @@ import DigiComplaint from '../components/lodge-a-complaint/SubLodgeComplaint/Dig
 import Policy from '../components/Privacy-Policy/Policy'
 import BranchLocator from '../components/Branch-Locator/BranchLocator'
 import ApplyMain from '../components/Apply-Now/ApplyMain'
+import Hoilday from '../components/Hoildays/Hoilday'
+import LoanInterestRate from '../components/Loan-Interest-Rate/LoanInterestRate'
 
 
 
@@ -189,7 +191,8 @@ const Routing = () => {
         <Route path="/Internet-banking" element={<Internet />} />
         <Route path="/IMPS-NEFT-RTGS" element={<IMPS />} />
         <Route path="/Apply-Now" element={<ApplyMain />} />
-
+<Route path="/bank-holiday" element={<Hoilday />} />
+<Route path="/Loan-Interest-Rate" element={<LoanInterestRate />} />
       </Routes>
       <Footer />
     </>

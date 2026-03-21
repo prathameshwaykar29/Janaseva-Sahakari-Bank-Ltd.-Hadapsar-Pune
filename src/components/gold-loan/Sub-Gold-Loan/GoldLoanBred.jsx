@@ -21,7 +21,7 @@ const GoldLoanBred = () => {
                     <div>
                        <h1 className="text-3xl lg:text-6xl font-bold text-[#1e3163] leading-tight mb-4">
     Gold Loan
-    <span className="block text-[#c9a84c] text-5xl">
+    <span className="block text-[#c9a84c] text-4xl mt-1">
         Quick Funds Against Your Gold
     </span>
 </h1>

@@ -19,7 +19,7 @@ const translations = {
     desc: "आपल्या नवीन किंवा वापरलेल्या दोन चाकी वाहनासाठी त्वरित आणि परवडणारी आर्थिक मदत मिळवा.",
     applyBtn: "अर्ज करा",
     calcBtn: "ईएमआय मोजा",
-    loanName: "दोन चाकी कर्ज योजना",
+    loanName: "Two-Wheeler Loan",
   },
 };
 
@@ -43,9 +43,9 @@ const TwoWheelerBred = () => {
 
                     {/* LEFT SIDE */}
                     <div>
-                       <h1 className="text-3xl lg:text-6xl font-bold text-[#1e3163] leading-tight mb-4">
+                       <h1 className="text-3xl lg:text-5xl font-bold text-[#1e3163] leading-tight mb-4">
     {t.title}
-    <span className="block text-[#c9a84c] text-5xl">
+    <span className="block text-[#c9a84c] text-4xl mt-1">
         {t.subtitle}
     </span>
 </h1>
@@ -85,11 +85,11 @@ const TwoWheelerBred = () => {
                     </div>
 
                     {/* RIGHT SIDE */}
-                    <div className="relative flex justify-center -mb-0 lg:-mb-16">
+                    <div className="relative flex justify-center -mb-0 lg:-mb-6">
                         <img
                             src={bikeImg}
                             alt="Two-Wheeler-Loan"
-                            className="w-[280px] sm:w-[350px] lg:w-[550px] object-contain"
+                            className="w-[280px] sm:w-[350px] lg:w-[450px] object-contain"
                         />
                     </div>
 

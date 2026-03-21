@@ -38,7 +38,7 @@ const t = translations[lang];
           <div>
             <h1 className="text-4xl lg:text-6xl font-bold text-[#1e3163] leading-tight mb-4">
               {t.title}
-              <span className="block text-[#c9a84c] text-5xl">
+              <span className="block text-[#c9a84c] text-4xl mt-1">
                 {t.subtitle}
               </span>
             </h1>

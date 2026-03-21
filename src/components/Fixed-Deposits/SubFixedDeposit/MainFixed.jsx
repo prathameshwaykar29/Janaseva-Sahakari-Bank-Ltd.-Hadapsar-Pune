@@ -168,7 +168,7 @@
 //                         {/* Heading */}
 //                         <h1 className="text-4xl lg:text-6xl font-bold text-[#1e3163] leading-tight mb-4">
 //                             Grow Your Savings with
-//                             <span className="block text-[#c9a84c] text-5xl">
+//                             <span className="block text-[#c9a84c] text-4xl mt-1">
 //                                 Fixed Deposit
 //                             </span>
 //                         </h1>
@@ -261,7 +261,7 @@ const MainFixed = () => {
           <div>
             <h1 className="text-4xl lg:text-6xl font-bold text-[#1e3163] leading-tight mb-4">
               Grow Your Savings with
-              <span className="block text-[#c9a84c] text-5xl">
+              <span className="block text-[#c9a84c] text-4xl mt-1">
                 Fixed Deposit
               </span>
             </h1>
